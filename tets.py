@@ -1,9 +1,11 @@
-import daemon, random, getpass
-getpass.getuser()
+import daemon, random
+
 def main():
-    res = random.randint(0, 1000)
-    print(1/res)
-    return 1/res
+    
+    for i in range(1000):
+        res = random.randint(0, 1000)
+        print(1/res)
+        return 1/res
 
 with daemon.DaemonContext():
     main()
